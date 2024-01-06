@@ -1,0 +1,36 @@
+baseURL = 'https://telmo.dev/'
+languageCode = 'en-us'
+title = 'Telmo'
+theme = 'hello-friend-ng'
+
+[params]
+  [[menu.main]]
+    identifier = "about"
+    name       = "about"
+    url        = "/about"
+  [[menu.main]]
+    identifier = "blog"
+    name       = "blog"
+    url        = "/posts"
+
+  [params.logo]
+    logoMark     = ">"
+    logoText     = "rm -rf /"
+    logoHomeLink = "/"
+
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/thetruetelmo"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/telmop"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/tjppires"
+
+  [[params.social]]
+    name = "googlescholar"
+    url = "https://scholar.google.com/citations?user=8j9lb_wAAAAJ"
+
