@@ -1,11 +1,10 @@
 ---
 title: "Hello"
-date: 2024-01-06T15:51:29Z
+date: 2025-10-25T14:20:01Z
 draft: false
 toc: false
 images:
 tags:
   - untagged
 ---
-Hopefully I will be writing more in the future.
-
+Revamped site. Hopefully I will be writing more in the future.
