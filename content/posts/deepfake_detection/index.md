@@ -1,12 +1,13 @@
 ---
 title: "How to detect Deepfakes"
-date: 2025-11-09T18:29:23Z
+date: 2025-11-26T23:22:49Z
 draft: false
-toc: false
+toc: true
 images:
 tags:
   - AI
   - DeepFakes
+  - AI Slop
 ---
 
 Being online in 2025 means seeing deepfakes and other AI-generated content every day. Some of it is harmless - funny animal videos and obvious memes. Some is dangerous because it's provocative or engineered to trigger a (negative) reaction.
