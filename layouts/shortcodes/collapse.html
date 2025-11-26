@@ -1,0 +1,12 @@
+{{/* layouts/shortcodes/collapse.html */}}
+{{ $collapsed := .Get "collapsed" | default "true" }}
+{{ $id := .Get "id" | default (printf "collapse-%d" now.Unix) }}
+
+<details{{ if eq $collapsed "true" }} {{ else }} open{{ end }}>
+  <summary style="cursor: pointer; padding: 0.5rem; background: #f5f5f5; border-radius: 4px; user-select: none; color: #333;">
+    {{ .Get "title" | default "Solutions" }}
+  </summary>
+  <div style="padding: 1rem; border-left: 2px solid #e0e0e0; margin-top: 0.5rem;">
+    {{ .Inner | markdownify }}
+  </div>
+</details>
