@@ -3,18 +3,21 @@
 {{ $caption := .Get "caption" }}
 {{ $maxWidth := .Get "max-width" | default "100%" }}
 
+{{ $videoResource := $.Page.Resources.GetMatch $src }}
+{{ $posterResource := $.Page.Resources.GetMatch $poster }}
+
 <figure style="text-align: center; margin: 1rem auto; max-width: {{ $maxWidth }};"
     {{ with .Get "class" }} class="{{ . }}"{{ end }}>
 
     <video
-        {{ with $poster }} poster="{{ . | absURL }}"{{ end }}
+        {{ with $posterResource }} poster="{{ .RelPermalink }}"{{ else }}{{ with $poster }} poster="{{ . | absURL }}"{{ end }}{{ end }}
         {{ with .Get "autoplay" }} autoplay{{ end }}
         {{ with .Get "loop" }} loop{{ end }}
         {{ with .Get "muted" }} muted{{ end }}
         controls preload="none"
         style="display: block; width: 100%; height: auto; margin: 0 auto;">
 
-        <source src="{{ $src | absURL }}" type="video/mp4">
+        <source src="{{ if $videoResource }}{{ $videoResource.RelPermalink }}{{ else }}{{ $src | absURL }}{{ end }}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 

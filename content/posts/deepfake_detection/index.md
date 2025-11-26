@@ -19,7 +19,7 @@ Below is a list of the main cues I watch for. Like any technique, they aren't pe
 ## The alert signs
 First, a couple of alert signs. If you see them, double-check what you're looking at.
 * **Always look for watermarks** - they're a dead giveaway. Certain GenAI tools, like Sora2, add watermarks to their content (see the image below).
-{{< figure-center src="posts/deepfake_detection/sora_watermark.png" caption="Sample watermark from Sora2." >}}
+{{< figure-center src="sora_watermark.png" caption="Sample watermark from Sora2." >}}
 * **Be suspicious of low resolution content**. Many of the signs below require zooming in and examining small details. One way to hide these flaws is to intentionally lower the resolution. As a rule of thumb, be skeptical of low resolution content.
 * **Be suspicious of perfection**. People are imperfect, and so is nature. If anything looks "too perfect" or "too cute", check again and see if you notice other signs.
 
@@ -30,46 +30,46 @@ Below is a list of common artifacts I look for. You usually want to find more th
 Most AI tools do a great job generating the main focus of an image (or video), but often miss secondary details like backgrounds and minor objects. Common artifacts include deformed people, distorted body parts (especially hands), incomplete or oddly shaped objects, and other “nonsensical” elements. A frequent source of errors is the boundary between different objects or body parts.
 
 Here are a few examples:
-{{< figure-center src="posts/deepfake_detection/macron.jpg" caption="Notice the hands on this deepfake of Emmanuel Macron." >}}
-{{< figure-center src="posts/deepfake_detection/clock.jpg" caption="Two big giveaways: the watch's hour marks are completely wrong (related to the next point, nonsensical text), and the spoon the woman is holding is incomplete." >}}
+{{< figure-center src="macron.jpg" caption="Notice the hands on this deepfake of Emmanuel Macron." >}}
+{{< figure-center src="clock.jpg" caption="Two big giveaways: the watch's hour marks are completely wrong (related to the next point, nonsensical text), and the spoon the woman is holding is incomplete." >}}
 
 Be especially mindful of blurred backgrounds with no detail, particularly in photos. Not all blurred backgrounds imply a deepfake, of course, but when real backgrounds contain many details, AI-generated ones often reveal artifacts. You can see this in action on [This Person does not exist](https://this-person-does-not-exist.com/en) and in the two faces below.
-{{< figure-center src="posts/deepfake_detection/fake_faces.jpg" caption="Notice how the background behind the man makes the fakeness easier to spot: it looks like two different backgrounds were pasted together. The plain background behind the woman gives us no clues. There are other signs, though: the woman's ear and hair don't merge cleanly at the top, and on the man, the necklace appears only on one side of his neck and the lower part of the right lens of his glasses is missing." >}}
+{{< figure-center src="fake_faces.jpg" caption="Notice how the background behind the man makes the fakeness easier to spot: it looks like two different backgrounds were pasted together. The plain background behind the woman gives us no clues. There are other signs, though: the woman's ear and hair don't merge cleanly at the top, and on the man, the necklace appears only on one side of his neck and the lower part of the right lens of his glasses is missing." >}}
 
 ### Look at text (and font)
 I don't mean text overlaid on the image or video. I mean text on objects or walls. Models are much better at this than before, but they still sometimes generate odd-looking text: inconsistent fonts (look for words where the same letter appears multiple times but looks different), text that changes between frames in a video, nonsensical words, overlapping characters, etc.
-{{< figure-center src="posts/deepfake_detection/bad_text.jpg" caption="Multiple artifacts here: the ramp on the left, the oddly shaped car and building, etc. But look at the text too: besides making no sense, the font is inconsistent. For example, the base of the last `L` in `HELLLOO` is shorter than the first two, and the `D`s in `PPPDUD` don't match." >}}
-{{< figure-center src="posts/deepfake_detection/bad_text2.jpg" caption="In this example, many characters are nonsensical. Older deepfake models often produced text like this, and it can still be spotted today." >}}
+{{< figure-center src="bad_text.jpg" caption="Multiple artifacts here: the ramp on the left, the oddly shaped car and building, etc. But look at the text too: besides making no sense, the font is inconsistent. For example, the base of the last `L` in `HELLLOO` is shorter than the first two, and the `D`s in `PPPDUD` don't match." >}}
+{{< figure-center src="bad_text2.jpg" caption="In this example, many characters are nonsensical. Older deepfake models often produced text like this, and it can still be spotted today." >}}
 
 ### Think about the physics of the scene
 This is especially useful for videos, but it applies to images too.
 
 If motion looks unrealistic - objects moving strangely, passing through each other, or deforming in impossible ways (e.g., legs bending backward) - you're likely looking at AI-generated content. If supposedly static objects shift or change between frames, that's another clue.
 
-{{< video-box src="posts/deepfake_detection/weird_movement.mp4"
-poster="posts/deepfake_detection/weird_movement_poster.jpg"
+{{< video-box src="weird_movement.mp4"
+poster="weird_movement_poster.jpg"
 caption="Notice how the guy moves, especially his legs, and how the mummy falls. This kind of unnatural movement is characteristic of current models."
 autoplay="" loop="" muted="" max-width="50%" >}}
 
 Even in images, check whether poses and support make sense. In the example below, the mother bird isn't standing on the branch - you only see the chicks' feet. She can't be flying, since her wings are covering them, so she has nothing to stand on. That means the image is fake.
-{{< figure-center src="posts/deepfake_detection/fake_bird.jpg" caption="The mother bird isn't standing on the branch, and she isn't flapping her wings either - she's effectively floating. Also note how the feathers merge into a single blob where the wings meet." >}}
-{{< figure-center src="posts/deepfake_detection/tesla_bad_charger.jpg" caption="You don't need to own a Tesla to see the charger is plugged into the wrong place. Also notice how the text, especially on the plate, resembles the bad-text examples above." >}}
+{{< figure-center src="fake_bird.jpg" caption="The mother bird isn't standing on the branch, and she isn't flapping her wings either - she's effectively floating. Also note how the feathers merge into a single blob where the wings meet." >}}
+{{< figure-center src="tesla_bad_charger.jpg" caption="You don't need to own a Tesla to see the charger is plugged into the wrong place. Also notice how the text, especially on the plate, resembles the bad-text examples above." >}}
 
 Other good indicators include inconsistent lighting or shadows, and odd clothing folds (especially sleeves, edges, and buttons).
-{{< figure-center src="posts/deepfake_detection/fake_doctor.jpg" caption="Multiple giveaways: the shirt buttons are oddly shaped (zoom in), the area around the coat pocket is deformed, and the folds on the doctor's right arm look unnatural." >}}
+{{< figure-center src="fake_doctor.jpg" caption="Multiple giveaways: the shirt buttons are oddly shaped (zoom in), the area around the coat pocket is deformed, and the folds on the doctor's right arm look unnatural." >}}
 
 As with everything else on this list, models keep improving and deepfakes keep getting more realistic. One small artifact could be due to how the photo was taken, but if you spot several small defects, chances are the image is generated.
 
 ### Cartoonish colors/textures
 This one is hard to describe, but once you've seen it a few times, it becomes easier to notice. Something about the colors, lighting, or texture can look "off".
-{{< figure-center src="posts/deepfake_detection/bad_colors.jpg" caption="I can't explain it, but the bear's color immediately triggered my deepfake alarm. Something about its color is off. The mountain and tire also look unusually \"flat\"." >}}
+{{< figure-center src="bad_colors.jpg" caption="I can't explain it, but the bear's color immediately triggered my deepfake alarm. Something about its color is off. The mountain and tire also look unusually \"flat\"." >}}
 On its own, I wouldn't rely on this sign, but if you notice it, start looking for other artifacts.
 
 ### Beware of morphing objects
 This is an artifact to watch for in videos. As an AI model generates a clip, it sometimes needs a few frames to settle on an object's appearance. Because of this, objects may "flicker" or change shape, *especially around the edges*. Pay close attention to background objects and text, as they can flicker too. You may also notice these artifacts when an object moves fully or partially out of frame and comes back.
 
-{{< video-box src="posts/deepfake_detection/tesla_morph.mp4"
-poster="posts/deepfake_detection/tesla_morph_poster.jpg"
+{{< video-box src="tesla_morph.mp4"
+poster="tesla_morph_poster.jpg"
 caption="Watch the hitch connecting the Tesla and the trailer. Can you see it morph during the clip?"
 autoplay="" loop="" muted="" max-width="50%" >}}
 
@@ -77,8 +77,8 @@ autoplay="" loop="" muted="" max-width="50%" >}}
 Check the videos below and see if you can spot the signs of generated content. Watch in full screen to make it easier to notice artifacts.
 
 ### Example 1
-{{< video-box src="posts/deepfake_detection/guy.mp4"
-    poster="posts/deepfake_detection/guy_poster.jpg"
+{{< video-box src="guy.mp4"
+    poster="guy_poster.jpg"
     caption=""
     autoplay="" loop="" muted="" max-width="50%" >}}
 
@@ -89,8 +89,8 @@ Two main artifacts:
 {{< /collapse >}}
 
 ### Example 2
-{{< video-box src="posts/deepfake_detection/bear.mp4"
-    poster="posts/deepfake_detection/bear_poster.jpg"
+{{< video-box src="bear.mp4"
+    poster="bear_poster.jpg"
     caption=""
     autoplay="" loop="" muted="" max-width="50%" >}}
 
@@ -101,8 +101,8 @@ Two main artifacts:
 {{< /collapse >}}
 
 ### Example 3
-{{< video-box src="posts/deepfake_detection/cold_water.mp4"
-    poster="posts/deepfake_detection/cold_water_poster.jpg"
+{{< video-box src="cold_water.mp4"
+    poster="cold_water_poster.jpg"
     caption="Video from [here](https://x.com/dian_arifiya/status/1987717372548112778)."
     autoplay="" loop="" muted="" max-width="50%" >}}
 
@@ -113,8 +113,8 @@ It's good to be skeptical, but don't "overfit" and start seeing fakes everywhere
 {{< /collapse >}}
 
 ### Example 4
-{{< video-box src="posts/deepfake_detection/amalfi.mp4"
-    poster="posts/deepfake_detection/amalfi_poster.jpg"
+{{< video-box src="amalfi.mp4"
+    poster="amalfi_poster.jpg"
     caption=""
     autoplay="" loop="" muted="" max-width="100%" >}}
 
